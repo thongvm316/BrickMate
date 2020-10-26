@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import AppRoute from './AppRoute';
 import LoginLayout from '../components/LoginLayout'
@@ -12,10 +12,11 @@ import Page2 from '../containers/Page2';
 const Routes = () => {
     return (
         <Switch>
-            <AppRoute exact path="/" component={Login} layout={LoginLayout} />
+            <Route exact path='/' component={Home} />
+            {/* <AppRoute exact path="/" component={Login} layout={LoginLayout} />
             <AppRoute exact path="/home" component={Home} />
             <AppRoute exact path="/page1" component={Page1} />
-            <AppRoute exact path="/page2" component={Page2} />
+            <AppRoute exact path="/page2" component={Page2} /> */}
         </Switch>
     )
 }
